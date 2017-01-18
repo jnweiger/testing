@@ -1,0 +1,25 @@
+version: "2"
+
+networks:
+  base:
+
+services:
+  owncloud:
+    image: ${TESTING_IMAGE}
+    # volumes:
+    #   - /source:/app
+    ports:
+      - 8080
+    links:
+      - db:db
+    networks:
+      - base
+    environment:
+      - OWNCLOUD_DOMAIN=owncloud
+      - OWNCLOUD_DB_TYPE=${TESTING_DATABASE}
+      - OWNCLOUD_DB_NAME=owncloud
+      - OWNCLOUD_DB_USERNAME=owncloud
+      - OWNCLOUD_DB_PASSWORD=p455w0rd
+      - OWNCLOUD_DB_HOST=db
+      - OWNCLOUD_ADMIN_USERNAME=admin
+      - OWNCLOUD_ADMIN_PASSWORD=admin

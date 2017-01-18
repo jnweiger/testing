@@ -1,0 +1,14 @@
+
+  litmus:
+    image: owncloud/litmus:latest
+    entrypoint: ["/bin/sleep", "86400"]
+    networks:
+      - base
+    environment:
+      - LITMUS_URL=http://owncloud:8080/remote.php/webdav
+      - LITMUS_USERNAME=admin
+      - LITMUS_PASSWORD=admin
+      - LITMUS_WAIT=true
+      - LITMUS_CHECK_URL=http://owncloud:8080/status.php
+    links:
+      - owncloud:owncloud

@@ -1,0 +1,7 @@
+
+  cache:
+    image: memcached:alpine
+    expose:
+      - 11211
+    networks:
+      - base
