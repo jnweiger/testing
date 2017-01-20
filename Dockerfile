@@ -1,10 +1,6 @@
 FROM owncloud/alpine:latest
 MAINTAINER ownCloud DevOps <devops@owncloud.com>
 
-VOLUME ["/source"]
-
-EXPOSE 8080
-
 ENTRYPOINT ["/usr/local/bin/runner"]
 
 RUN apk update && \

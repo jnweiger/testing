@@ -5,11 +5,11 @@
     networks:
       - base
     environment:
-      - SMASHBOX_URL=owncloud:8080
+      - SMASHBOX_URL=owncloud
       - SMASHBOX_USERNAME=admin
       - SMASHBOX_PASSWORD=admin
       - SMASHBOX_WAIT=true
       - SMASHBOX_TEST_NAME=${TESTING_TESTS}
-      - SMASHBOX_CHECK_URL=owncloud:8080/status.php
+      - SMASHBOX_CHECK_URL=owncloud/status.php
     links:
       - owncloud:owncloud

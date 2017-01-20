@@ -6,13 +6,12 @@ networks:
 services:
   owncloud:
     image: ${TESTING_IMAGE}
-    # volumes:
-    #   - /source:/app
+    volumes:
+      - ${TESTING_PATH}:/var/www/owncloud
     ports:
-      - 8080
+      - 80
     links:
       - db:db
-      - cache:cache
     networks:
       - base
     environment:

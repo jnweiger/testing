@@ -5,10 +5,10 @@
     networks:
       - base
     environment:
-      - LITMUS_URL=http://owncloud:8080/remote.php/webdav
+      - LITMUS_URL=http://owncloud/remote.php/webdav
       - LITMUS_USERNAME=admin
       - LITMUS_PASSWORD=admin
       - LITMUS_WAIT=true
-      - LITMUS_CHECK_URL=http://owncloud:8080/status.php
+      - LITMUS_CHECK_URL=http://owncloud/status.php
     links:
       - owncloud:owncloud

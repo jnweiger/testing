@@ -11,7 +11,7 @@ This is our minimal image for testing wrapper based on our [Ubuntu container](ht
 docker run -ti --rm \
   --name testing \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd)/source:/source \
+  --env TESTING_PATH=$(pwd)/owncloud \
   owncloud/testing:latest
 ```
 
@@ -32,7 +32,7 @@ IMAGE_NAME=owncloud/testing ./hooks/build
 
 ## Volumes
 
-* `/source`
+* None
 
 
 ## Ports
@@ -44,18 +44,18 @@ IMAGE_NAME=owncloud/testing ./hooks/build
 
 ```
 TESTING_NAME testing
-TESTING_NUMBER 0
 TESTING_CACHE none
 TESTING_DATABASE mysql
 TESTING_SUITE litmus
 TESTING_TESTS basicSync
-TESTING_IMAGE webhippie/owncloud:latest
+TESTING_IMAGE owncloud/base:latest
+TESTING_PATH source
 ```
 
 
 ## Issues, Feedback and Ideas
 
-Open an [Issue](https://github.com/owncloud-docker/smashbox/issues)
+Open an [Issue](https://github.com/owncloud-docker/testing/issues)
 
 
 ## Contributing

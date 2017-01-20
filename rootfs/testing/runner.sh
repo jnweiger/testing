@@ -6,25 +6,25 @@ declare -x TESTING_DATABASE
 declare -x TESTING_SUITE
 declare -x TESTING_TESTS
 declare -x TESTING_IMAGE
+declare -x TESTING_PATH
 
 [[ -z "${TESTING_NAME}" ]] && TESTING_NAME="testing"
 [[ -z "${TESTING_CACHE}" ]] && TESTING_CACHE="none"
 [[ -z "${TESTING_DATABASE}" ]] && TESTING_DATABASE="mysql"
 [[ -z "${TESTING_SUITE}" ]] && TESTING_SUITE="litmus"
 [[ -z "${TESTING_TESTS}" ]] && TESTING_TESTS="basicSync"
-[[ -z "${TESTING_IMAGE}" ]] && TESTING_IMAGE="webhippie/owncloud:latest"
+[[ -z "${TESTING_IMAGE}" ]] && TESTING_IMAGE="owncloud/base:latest"
+[[ -z "${TESTING_PATH}" ]] && TESTING_PATH="source"
 
 case ${TESTING_CACHE} in
   memcached)
-    cat snippets/base-cache.yml >| generated.yml
     cat snippets/memcached.yml >> generated.yml
     ;;
   redis)
-    cat snippets/base-cache.yml >| generated.yml
     cat snippets/redis.yml >> generated.yml
     ;;
   *)
-    cat snippets/base-general.yml >| generated.yml
+    cat snippets/base.yml >| generated.yml
     ;;
 esac
 
