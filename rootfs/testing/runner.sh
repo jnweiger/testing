@@ -56,7 +56,7 @@ case ${TESTING_SUITE} in
     rm -f litmus.out fail.txt
 
     ${COMPOSE} exec litmus /usr/local/bin/litmus-wrapper | tee litmus.out
-    grep -a -v high-unicode litmus.out | grep -a FAIL | tee fail.txt
+    grep -a -v 'high.unicode' litmus.out | grep -a FAIL | tee fail.txt
 
     if [ -s fail.txt ]
     then
