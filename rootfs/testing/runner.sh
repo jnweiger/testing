@@ -49,6 +49,8 @@ esac
 COMPOSE="docker-compose -f generated.yml --project-name ${TESTING_NAME}"
 
 trap "${COMPOSE} down" EXIT
+
+${COMPOSE} pull --ignore-pull-failures
 ${COMPOSE} up -d
 
 case ${TESTING_SUITE} in
