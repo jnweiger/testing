@@ -7,6 +7,7 @@ declare -x TESTING_SUITE
 declare -x TESTING_TESTS
 declare -x TESTING_IMAGE
 declare -x TESTING_PATH
+declare -x TESTING_CLIENT
 
 [[ -z "${TESTING_NAME}" ]] && TESTING_NAME="testing"
 [[ -z "${TESTING_CACHE}" ]] && TESTING_CACHE="none"
@@ -15,6 +16,7 @@ declare -x TESTING_PATH
 [[ -z "${TESTING_TESTS}" ]] && TESTING_TESTS="basicSync"
 [[ -z "${TESTING_IMAGE}" ]] && TESTING_IMAGE="owncloud/base:latest"
 [[ -z "${TESTING_PATH}" ]] && TESTING_PATH="source"
+[[ -z "${TESTING_CLIENT}" ]] && TESTING_CLIENT="latest"
 
 case ${TESTING_CACHE} in
   memcached)

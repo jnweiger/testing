@@ -1,6 +1,6 @@
 
   smashbox:
-    image: owncloud/smashbox:latest
+    image: owncloud/smashbox:${TESTING_CLIENT}
     entrypoint: ["/bin/sleep", "86400"]
     networks:
       - base

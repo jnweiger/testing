@@ -50,6 +50,7 @@ TESTING_SUITE litmus
 TESTING_TESTS basicSync
 TESTING_IMAGE owncloud/base:latest
 TESTING_PATH source
+TESTING_CLIENT latest
 ```
 
 
