@@ -16,3 +16,8 @@ docker run -ti --rm \
 ```
 
 If you want to see all available environment variables you can use with this docker image please take a look at the corresponding [README](https://github.com/owncloud-docker/litmus#available-environment-variables).
+
+
+## Versions
+
+You can see the available Docker tags within the [responsible repository](https://github.com/owncloud-docker/litmus#versions) where we are building the images.
