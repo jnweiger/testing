@@ -39,5 +39,6 @@ services:
       - SMASHBOX_WAIT=true
       - SMASHBOX_TEST_NAME=${TESTING_TESTS}
       - SMASHBOX_CHECK_URL=owncloud/status.php
+      - SMASHBOX_SSL_ENABLED=false
     links:
       - owncloud:owncloud
