@@ -4,7 +4,7 @@ services:
   owncloud:
     image: ${TESTING_OWNCLOUD}
     ports:
-      - ${TESTING_PORT}:80
+      - 80
     links:
       - db:db
     environment:

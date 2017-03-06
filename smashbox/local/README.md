@@ -14,7 +14,6 @@ To run the test suite for a specific clone of the ownCloud source just execute t
 wget -O - https://download.owncloud.org/community/owncloud-9.1.4.tar.bz2 | tar xjf -
 
 export TESTING_PATH=./owncloud
-export TESTING_PORT=8080
 export TESTING_SMASHBOX=latest
 export TESTING_TESTS=fileMove
 
@@ -37,7 +36,6 @@ Just to explain what we want to archive with the commands you can see above we h
 | Variable | Description |
 | --- | --- |
 | TESTING_PATH | Path to the ownCloud source, e.g. `./owncloud` |
-| TESTING_PORT | Port for the host binding, e.g. `8080` |
 | TESTING_SMASHBOX | Version of the Smashbox container, e.g. `latest` |
 | TESTING_TESTS | Smashbox test suite, e.g. `fileMove` |
 
@@ -51,7 +49,6 @@ To run the test suite for a specific already existing Docker ownCloud container 
 
 ```
 export TESTING_OWNCLOUD=owncloud/server:9.1.4
-export TESTING_PORT=8080
 export TESTING_SMASHBOX=latest
 export TESTING_TESTS=fileMove
 
@@ -74,6 +71,5 @@ Just to explain what we want to archive with the commands you can see above we h
 | Variable | Description |
 | --- | --- |
 | TESTING_OWNCLOUD | An ownCloud image to use, e.g. `owncloud/server:9.1.4` |
-| TESTING_PORT | Port for the host binding, e.g. `8080` |
 | TESTING_SMASHBOX | Version of the Smashbox container, e.g. `latest` |
 | TESTING_TESTS | Smashbox test suite, e.g. `fileMove` |

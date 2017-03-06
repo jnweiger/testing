@@ -14,7 +14,6 @@ To run the test suite for a specific clone of the ownCloud source just execute t
 wget -O - https://download.owncloud.org/community/owncloud-9.1.4.tar.bz2 | tar xjf -
 
 export TESTING_PATH=./owncloud
-export TESTING_PORT=8080
 export TESTING_LITMUS=latest
 
 docker-compose -f from-source.yml pull
@@ -50,7 +49,6 @@ To run the test suite for a specific already existing Docker ownCloud container 
 ```
 export TESTING_OWNCLOUD=owncloud/server:9.1.4
 export TESTING_PATH=./owncloud
-export TESTING_PORT=8080
 export TESTING_LITMUS=latest
 
 docker-compose -f from-container.yml pull
@@ -72,5 +70,4 @@ Just to explain what we want to archive with the commands you can see above we h
 | Variable | Description |
 | --- | --- |
 | TESTING_OWNCLOUD | An ownCloud image to use, e.g. `owncloud/server:9.1.4` |
-| TESTING_PORT | Port for the host binding, e.g. `8080` |
 | TESTING_LITMUS | Version of the Litmus container, e.g. `latest` |
