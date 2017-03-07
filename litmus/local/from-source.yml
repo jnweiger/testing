@@ -1,5 +1,9 @@
 version: "2"
 
+networks:
+  general:
+    internal: true
+
 services:
   owncloud:
     image: owncloud/base:latest
@@ -9,29 +13,36 @@ services:
       - 80
     links:
       - db:db
+    networks:
+      - general
     environment:
       - OWNCLOUD_DOMAIN=owncloud
       - OWNCLOUD_DB_TYPE=mysql
       - OWNCLOUD_DB_NAME=owncloud
-      - OWNCLOUD_DB_USERNAME=owncloud
+      - OWNCLOUD_DB_USERNAME=root
       - OWNCLOUD_DB_PASSWORD=p455w0rd
       - OWNCLOUD_DB_HOST=db
       - OWNCLOUD_ADMIN_USERNAME=admin
       - OWNCLOUD_ADMIN_PASSWORD=admin
 
   db:
-    image: mysql:5
+    image: webhippie/mariadb:latest
     expose:
       - 3306
+    networks:
+      - general
     environment:
-      - MYSQL_ROOT_PASSWORD=p455w0rd
-      - MYSQL_DATABASE=owncloud
-      - MYSQL_USER=owncloud
-      - MYSQL_PASSWORD=p455w0rd
+      - MARIADB_ROOT_PASSWORD=p455w0rd
+      - MARIADB_DATABASE=owncloud
+      - MARIADB_USERNAME=owncloud
+      - MARIADB_PASSWORD=owncloud
+      - MARIADB_INNODB_USE_NATIVE_AIO=0
 
   litmus:
     image: owncloud/litmus:${TESTING_LITMUS}
     entrypoint: ["/bin/sleep", "86400"]
+    networks:
+      - general
     environment:
       - LITMUS_URL=http://owncloud/remote.php/webdav
       - LITMUS_USERNAME=admin
