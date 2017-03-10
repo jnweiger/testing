@@ -15,6 +15,7 @@ wget -O - https://download.owncloud.org/community/owncloud-9.1.4.tar.bz2 | tar x
 
 export TESTING_PATH=./owncloud
 export TESTING_LITMUS=latest
+export TESTING_CACHE=\OC\Memcache\APCu
 
 docker-compose -f from-source.yml pull
 docker-compose -f from-source.yml up -d
@@ -37,6 +38,7 @@ Just to explain what we want to archive with the commands you can see above we h
 | TESTING_PATH | Path to the ownCloud source, e.g. `./owncloud` |
 | TESTING_PORT | Port for the host binding, e.g. `8080` |
 | TESTING_LITMUS | Version of the Litmus container, e.g. `latest` |
+| TESTING_CACHE | Used local cache, e.g. `\OC\Memcache\APCu` |
 
 
 ## Running on Docker container
@@ -50,6 +52,7 @@ To run the test suite for a specific already existing Docker ownCloud container 
 export TESTING_OWNCLOUD=owncloud/server:9.1.4
 export TESTING_PATH=./owncloud
 export TESTING_LITMUS=latest
+export TESTING_CACHE=\OC\Memcache\APCu
 
 docker-compose -f from-container.yml pull
 docker-compose -f from-container.yml up -d
@@ -71,3 +74,4 @@ Just to explain what we want to archive with the commands you can see above we h
 | --- | --- |
 | TESTING_OWNCLOUD | An ownCloud image to use, e.g. `owncloud/server:9.1.4` |
 | TESTING_LITMUS | Version of the Litmus container, e.g. `latest` |
+| TESTING_CACHE | Used local cache, e.g. `\OC\Memcache\APCu` |

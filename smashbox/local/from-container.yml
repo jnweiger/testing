@@ -20,6 +20,7 @@ services:
       - OWNCLOUD_DB_HOST=db
       - OWNCLOUD_ADMIN_USERNAME=admin
       - OWNCLOUD_ADMIN_PASSWORD=admin
+      - OWNCLOUD_CACHING_CLASS=${TESTING_CACHE}
 
   db:
     image: webhippie/mariadb:latest
