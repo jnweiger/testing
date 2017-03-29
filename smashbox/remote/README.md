@@ -19,6 +19,13 @@ docker run -ti --rm \
   owncloud/smashbox:latest
 ```
 
+`SMASHBOX_URL` must be without protocol. If your URL is at https://172.18.16.143/owncloud, specify `owncloud/smashbox:latest`.
+`SMASHBOX_USERNAME` and `SMASHBOX_PASSWORD` are credentials of an existing(!) user in the administration group. It is used to e.g. create a smashbox user account, whose password will be set to 
+`SMASHBOX_ACCOUNT_PASSWORD` (any random string will do here).
+
+The configuration
+`SMASHBOX_TEST_SET=-a` and `SMASHBOX_TEST_NAME=basicSync` is expected to run between 10 and 30 Minutes, depending on network and server perfomance.
+
 If you want to see all available environment variables you can use with this docker image please take a look at the corresponding [README](https://github.com/owncloud-docker/smashbox#available-environment-variables).
 
 
