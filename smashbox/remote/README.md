@@ -25,7 +25,7 @@ docker run -ti --rm \
 | --- | --- |
 | SMASHBOX_USERNAME | Existing admin account that is able to create users. |
 | SMASHBOX_PASSWORD | Password for SMASHBOX_USERNAME. |
-| SMASHBOX_ACCOUNT_PASSWORD | password used e.g. for the test_basicSync user (any random string will do here). |
+| SMASHBOX_ACCOUNT_PASSWORD | password used e.g. for the test_basicSync* users (any random string will do here). |
 | SMASHBOX_TEST_SET | Example: `-a` |
 | SMASHBOX_TEST_NAME | Example: `basicSync` This example expected to run between 3 and 10 Minutes, depending on network and server perfomance. | 
 
@@ -56,7 +56,7 @@ SUMMARY:smash.:Elapsed time 142s (0:02:22.319994)
 <b>echo $?</b><br>
  0
 
-
+The state of the DUT is changed: Users `test_Smashbox*` are created and left behind.
 
 
 ## Versions
