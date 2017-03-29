@@ -24,7 +24,7 @@ docker run -ti --rm \
 `SMASHBOX_ACCOUNT_PASSWORD` (any random string will do here).
 
 The configuration
-`SMASHBOX_TEST_SET=-a` and `SMASHBOX_TEST_NAME=basicSync` is expected to run between 10 and 30 Minutes, depending on network and server perfomance.
+`SMASHBOX_TEST_SET=-a` and `SMASHBOX_TEST_NAME=basicSync` is expected to run between 3 and 10 Minutes, depending on network and server perfomance.
 
 If you want to see all available environment variables you can use with this docker image please take a look at the corresponding [README](https://github.com/owncloud-docker/smashbox#available-environment-variables).
 
