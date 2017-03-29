@@ -41,9 +41,9 @@ Test failure is indicated if the output ends like this:
 ...
 SUMMARY:smash.:Elapsed time: 33s (0:00:33.107682)
 CRITICAL:smash.:Aborting run -- non-zero exit code (1)
-echo $?
- 1
 ```
+<b>echo $?</b><br>
+ 1
 
 #### PASS
 
@@ -52,9 +52,9 @@ The zero exit code is not printed if the test is good. The output ends like this
 ```
 ...
 SUMMARY:smash.:Elapsed time 142s (0:02:22.319994)
-echo $?
- 0
 ```
+<b>echo $?</b><br>
+ 0
 
 
 
