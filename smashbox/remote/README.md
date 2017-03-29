@@ -19,14 +19,44 @@ docker run -ti --rm \
   owncloud/smashbox:latest
 ```
 
-`SMASHBOX_URL` must be without protocol. If your URL is at https://172.18.16.143/owncloud, specify `owncloud/smashbox:latest`.
-`SMASHBOX_USERNAME` and `SMASHBOX_PASSWORD` are credentials of an existing(!) user in the administration group. It is used to e.g. create a smashbox user account, whose password will be set to 
-`SMASHBOX_ACCOUNT_PASSWORD` (any random string will do here).
+### Available environment variables
 
-The configuration
-`SMASHBOX_TEST_SET=-a` and `SMASHBOX_TEST_NAME=basicSync` is expected to run between 3 and 10 Minutes, depending on network and server perfomance.
+| Variable | Description |
+| --- | --- |
+| SMASHBOX_USERNAME | Existing admin account that is able to create users. |
+| SMASHBOX_PASSWORD | Password for SMASHBOX_USERNAME. |
+| SMASHBOX_ACCOUNT_PASSWORD | password used e.g. for the test_basicSync user (any random string will do here). |
+| SMASHBOX_TEST_SET | Example: `-a` |
+| SMASHBOX_TEST_NAME | Example: `basicSync` This example expected to run between 3 and 10 Minutes, depending on network and server perfomance. | 
 
 If you want to see all available environment variables you can use with this docker image please take a look at the corresponding [README](https://github.com/owncloud-docker/smashbox#available-environment-variables).
+
+
+### Test results
+
+#### FAIL
+
+Test failure is indicated if the output ends like this:
+```
+...
+SUMMARY:smash.:Elapsed time: 33s (0:00:33.107682)
+CRITICAL:smash.:Aborting run -- non-zero exit code (1)
+echo $?
+ 1
+```
+
+#### PASS
+
+The zero exit code is not printed if the test is good. The output ends like this:
+
+```
+...
+SUMMARY:smash.:Elapsed time 142s (0:02:22.319994)
+echo $?
+ 0
+```
+
+
 
 
 ## Versions
