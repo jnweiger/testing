@@ -1,0 +1,15 @@
+---
+kind: pipeline
+type: docker
+name: arm64
+platform:
+  os: linux
+  arch: arm64
+steps:
+  - name: test
+    image: debian:latest
+    commands:
+      - echo "This is .drone.yml"
+      - uname -m
+      - cat /etc/hosts
+
