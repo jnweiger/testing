@@ -9,7 +9,9 @@ steps:
   - name: test
     image: debian:latest
     commands:
-      - echo "This is .drone.yml"
+      - echo "Hello World. This is .drone.yml"
       - uname -m
       - cat /etc/hosts
+      - pwd
+      - env
 
