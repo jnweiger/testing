@@ -12,9 +12,11 @@ def pipeline(name, arch):
         "name": "test",
         "image": "debian:latest",
         "commands": [
-          "echo \"This is .drone.star\"",
+          "echo \"Hello world. This is .drone.star\"",
           "uname -m",
-          "cat /etc/hosts"
+          "pwd",
+          "cat /etc/hosts",
+          "env",
         ]
       }
     ]
