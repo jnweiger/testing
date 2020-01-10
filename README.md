@@ -1,36 +1,18 @@
-# ownCloud: Testing
+# jnweiger: Testing
 
-This repository documents the currently available test suites and how to use them based on local or remote instances of ownCloud. Beside that we also provide a Docker image that wraps parts of the test suites, this is a work in progress and doesn't cover all cases yet. You can see a list of available test suites below:
+This repo has some testing stuff.
 
-* [Litmus](litmus/)
-* [Smashbox](smashbox/)
-* [Unit](unit/)
-* [Integration](integration/)
+## Today's special: trigger stuff at cloud.drone.io
 
-
-## Issues, Feedback and Ideas
-
-Open an [Issue](https://github.com/owncloud-docker/testing/issues)
-
-
-## Contributing
-
-Fork -> Patch -> Push -> Pull Request
-
-
-## Authors
-
-* [Thomas Boerger](https://github.com/tboerger)
-* [Thomas Mueller](https://github.com/DeepDiver1975)
+[![Build Status](https://cloud.drone.io/api/badges/jnweiger/owncloud-docker-server/status.svg)](https://cloud.drone.io/jnweiger/owncloud-docker-server)
 
 
 ## License
 
-MIT
-
+Distribute under GPLv2 or ask.
 
 ## Copyright
 
 ```
-Copyright (c) 2017 Thomas Boerger <tboerger@owncloud.com>
+Copyright (c) 2019 Jürgen Weigert <jnweiger@gmail.com>
 ```

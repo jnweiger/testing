@@ -1,3 +1,0 @@
-# ownCloud: Integration
-
-TBD
