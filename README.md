@@ -2,6 +2,8 @@
 
 This repo has some testing stuff.
 
+One edit in master since develop was branched.
+
 ## Today's special: trigger stuff at cloud.drone.io
 
 [![Build Status](https://cloud.drone.io/api/badges/jnweiger/testing/status.svg)](https://cloud.drone.io/jnweiger/testing)
