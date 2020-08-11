@@ -22,12 +22,11 @@ Yeah, and if you want to see
 </details>
 
 <details open>
-<summary>The effect of showspeed is similar to inserting |pv| into a command pipeline. Showspeed has these advantage over pv:</summay>
+<summary>The effect folding should be to hide details contents. But here, it does not work:</summay>
   
- + No need to construct an artificial pipeline if monitoring a simple command.
- + You can call it *after* starting your command or pipeline.
- + You can start stop monitoring as you like.
- + It can forsee the end and print an estimated time of arrival. Sometimes. 
+ + The bullet list is always visible.
+ + >ou can click on the triangle, it does *not* matter which way it points.
+ + That is bad.
 </details>
 
 ## Today's special: trigger stuff at cloud.drone.io
