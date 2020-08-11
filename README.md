@@ -2,7 +2,24 @@
 
 This repo has some testing stuff.
 
-One edit in master since develop was branched.
+## Folding
+
+<details open>
+<summary>Do we have proper markdown?</summary>
+
+* [ ] in github
+* [ ] with all features?
+* [ ] and can it do folding?
+</details>
+
+Yeah, and if you want to see
+
+<details close>
+<summary>more, then click the little triangle at the left hand side...</summary>
+
++ you made it,
++ congratulations
+</summary>
 
 ## Today's special: trigger stuff at cloud.drone.io
 
