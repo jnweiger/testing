@@ -21,6 +21,15 @@ Yeah, and if you want to see
 + congratulations
 </details>
 
+<details open>
+<summary>The effect of showspeed is similar to inserting |pv| into a command pipeline. Showspeed has these advantage over pv:</summay>
+  
+ + No need to construct an artificial pipeline if monitoring a simple command.
+ + You can call it *after* starting your command or pipeline.
+ + You can start stop monitoring as you like.
+ + It can forsee the end and print an estimated time of arrival. Sometimes. 
+</details>
+
 ## Today's special: trigger stuff at cloud.drone.io
 
 [![Build Status](https://cloud.drone.io/api/badges/jnweiger/testing/status.svg)](https://cloud.drone.io/jnweiger/testing)
