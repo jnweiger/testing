@@ -19,7 +19,7 @@ Yeah, and if you want to see
 
 + you made it,
 + congratulations
-</summary>
+</details>
 
 ## Today's special: trigger stuff at cloud.drone.io
 
