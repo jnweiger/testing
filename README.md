@@ -25,7 +25,7 @@ Yeah, and if you want to see
 <summary>The effect folding should be to hide details contents. But here, it does not work:</summay>
   
  + The bullet list is always visible.
- + >ou can click on the triangle, it does *not* matter which way it points.
+ + You can click on the triangle, it does *not* matter which way it points.
  + That is bad.
 </details>
 
