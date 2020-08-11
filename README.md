@@ -25,7 +25,7 @@ Yeah, and if you want to see
 <summary>The effect folding should be to hide details contents. But here, it does not work:</summay>
   
  + The bullet list is always visible.
- + when there is a typo in the trailing `</summary>`
+ + when there is a typo in the trailing `</summa`r`y>`
 </details>
 
 ## Today's special: trigger stuff at cloud.drone.io
